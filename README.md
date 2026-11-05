@@ -9,7 +9,8 @@ Code and results for the paper
 The scripts evaluate five lightweight classifiers (decision tree, random forest,
 two LightGBM ensembles, logistic regression) on three NetFlow v2 datasets
 (NF-UNSW-NB15-v2, NF-ToN-IoT-v2, NF-CSE-CIC-IDS2018-v2) within and across
-datasets. They also measure duplicate leakage and the cost of deploying each model.
+datasets. They also measure duplicate leakage the cost of deploying each model, and how far a small number of labelled
+target flows helps.
 
 ## 1. Get the data
 
@@ -54,7 +55,8 @@ From the repository root, in this order:
 | `scripts/e5_capacity.py` | E5: Table 13, Fig. 2 | `results_step12_capacity.csv` | ~6 min |
 | `scripts/e6_identifiability.py` | E6: Table 10, Sec. 5.4 | `single_feature_auc.csv` | ~1 min |
 | `scripts/e7_duplicate_leakage.py` | E7: Table 6 | `results_e7_leak_share.csv`, `results_e7_leakage.csv` | ~8 min |
-| `scripts/edge_cost.py` | Table 14 | `results_edge_cost_v2.csv` | ~2 min |
+| `scripts/e8_target_labels.py` | E8: Table 14 | `results_e8_target_labels.csv` | ~17 min |
+| `scripts/edge_cost.py` | Table 15 | `results_edge_cost_v2.csv` | ~2 min |
 | `scripts/make_figures.py` | Figs. 1–2 | `figures/*.pdf` | seconds |
 
 `00_prepare_data.py` must run first. The other scripts read its output and can
@@ -85,7 +87,7 @@ depend on the machine and vary between runs.
 
 * The four identifier columns (`IPV4_SRC_ADDR`, `IPV4_DST_ADDR`, `L4_SRC_PORT`,
   `L4_DST_PORT`) are removed before deduplication. `LONGEST_FLOW_PKT` is identical
-  to `MAX_IP_PKT_LEN` and is dropped in E1–E5, E7 and the edge-cost script. E6 was
+  to `MAX_IP_PKT_LEN` and is dropped in E1–E5, E7, E8 and the edge-cost script. E6 was
   run with it, as stated in the paper.
 * The scripts are the cells of the original notebook, unchanged except for the file
   paths, so they reproduce the paper's numbers.
