@@ -1,0 +1,4 @@
+dataset,raw_sample,test,twin_same_label_pct,twin_other_label_only_pct,no_twin_pct
+unsw,1000141,300043,88.9,0.0,11.1
+ton,998871,299662,78.2,0.0,21.8
+cic,1000689,300207,45.2,0.0,54.8

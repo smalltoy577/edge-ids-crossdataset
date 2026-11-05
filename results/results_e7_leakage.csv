@@ -1,0 +1,19 @@
+dataset,model,group,n,attack_share,roc_auc,f1
+unsw,DecisionTree,all test flows,300043,0.04,0.9984,0.9636
+unsw,DecisionTree,flow has same-label twin in train,266861,0.0273,1.0,0.9926
+unsw,DecisionTree,no twin in train,33182,0.1421,0.991,0.9199
+unsw,LightGBM100,all test flows,300043,0.04,0.9998,0.9674
+unsw,LightGBM100,flow has same-label twin in train,266861,0.0273,1.0,0.9938
+unsw,LightGBM100,no twin in train,33182,0.1421,0.9957,0.9275
+ton,DecisionTree,all test flows,299662,0.6406,0.993,0.9862
+ton,DecisionTree,flow has same-label twin in train,234349,0.5947,0.997,0.9913
+ton,DecisionTree,no twin in train,65313,0.8051,0.9572,0.9731
+ton,LightGBM100,all test flows,299662,0.6406,0.9993,0.9928
+ton,LightGBM100,flow has same-label twin in train,234349,0.5947,0.9999,0.9954
+ton,LightGBM100,no twin in train,65313,0.8051,0.9918,0.986
+cic,DecisionTree,all test flows,300207,0.1213,0.989,0.9795
+cic,DecisionTree,flow has same-label twin in train,135564,0.1797,0.9995,0.9964
+cic,DecisionTree,no twin in train,164643,0.0733,0.9551,0.9437
+cic,LightGBM100,all test flows,300207,0.1213,0.9918,0.9812
+cic,LightGBM100,flow has same-label twin in train,135564,0.1797,0.9999,0.999
+cic,LightGBM100,no twin in train,164643,0.0733,0.96,0.9436

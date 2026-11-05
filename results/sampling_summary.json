@@ -1,0 +1,23 @@
+{
+  "unsw": {
+    "full_rows": 2390275,
+    "unique_rows": 241206,
+    "sample_rows": 241206,
+    "attack_pct": 17.15,
+    "columns": 41
+  },
+  "ton": {
+    "full_rows": 16940496,
+    "unique_rows": 2477944,
+    "sample_rows": 999929,
+    "attack_pct": 75.28,
+    "columns": 41
+  },
+  "cic": {
+    "full_rows": 18893708,
+    "unique_rows": 8983437,
+    "sample_rows": 1001326,
+    "attack_pct": 6.27,
+    "columns": 41
+  }
+}
