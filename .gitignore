@@ -1,0 +1,9 @@
+data/
+work/
+processed/
+*.parquet
+*.zip
+*.joblib
+*.npy
+__pycache__/
+.ipynb_checkpoints/
